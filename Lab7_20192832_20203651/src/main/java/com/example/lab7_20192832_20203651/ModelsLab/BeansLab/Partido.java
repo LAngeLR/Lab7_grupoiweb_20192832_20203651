@@ -16,7 +16,7 @@ public class Partido {
     private int seleccionVisitante;
 
 
-    private int arbitro;
+    private Arbitro arbitropartido;
 
     public int getIdPartido() {
         return idPartido;
@@ -58,12 +58,12 @@ public class Partido {
         this.seleccionVisitante = seleccionVisitante;
     }
 
-    public int getArbitro() {
-        return arbitro;
+    public Arbitro getArbitropartido() {
+        return arbitropartido;
     }
 
-    public void setArbitro(int arbitro) {
-        this.arbitro = arbitro;
+    public void setArbitropartido(Arbitro arbitropartido) {
+        this.arbitropartido = arbitropartido;
     }
 }
 
