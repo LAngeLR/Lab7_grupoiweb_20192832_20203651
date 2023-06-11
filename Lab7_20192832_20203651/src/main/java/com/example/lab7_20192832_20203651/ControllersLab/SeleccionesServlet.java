@@ -4,7 +4,10 @@ import com.example.lab7_20192832_20203651.ModelsLab.BeansLab.Estadio;
 import com.example.lab7_20192832_20203651.ModelsLab.BeansLab.Partido;
 import com.example.lab7_20192832_20203651.ModelsLab.BeansLab.Seleccion;
 import com.example.lab7_20192832_20203651.ModelsLab.Daos.Lab.EstadiosDao;
+import com.example.lab7_20192832_20203651.ModelsLab.Daos.Lab.JugadoresDao;
 import com.example.lab7_20192832_20203651.ModelsLab.Daos.Lab.SeleccionDao;
+import com.example.lab7_20192832_20203651.ModelsLab.BeansLab.Jugador;
+import com.example.lab7_20192832_20203651.ModelsLab.Daos.JugadoresDao;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -59,6 +62,7 @@ public class SeleccionesServlet extends HttpServlet {
 
         SeleccionDao daoPartidos = new SeleccionDao();
         EstadiosDao daoEstadios = new EstadiosDao();
+        JugadoresDao JugadoresDao = new JugadoresDao();
         String idSeleccion;
 
         switch (action) {
@@ -83,15 +87,19 @@ public class SeleccionesServlet extends HttpServlet {
                     if ((partido.getSeleccionLocal().getIdSeleccion()==Integer.parseInt(idSeleccion)) || partido.getSeleccionVisitante().getIdSeleccion()==Integer.parseInt(idSeleccion)) {
                         response.sendRedirect(request.getContextPath() + "/SeleccionesServlet?action=lista");
                     }else {
+                        if (seleccionAsignadaAJugador(idSeleccion)) {
+                            response.sendRedirect(request.getContextPath() + "/SeleccionesServlet?action=lista");
+                            return;
+                        }
                         daoPartidos.borrarSeleccion(idSeleccion);
                         response.sendRedirect(request.getContextPath() + "/SeleccionesServlet");
                     }
                 }
 
-                ArrayList<Jugador> listaJugadores = daoJugadores.listaDeJugadores();
+                ArrayList<Jugador> listaJugadores = JugadoresDao.listaDeJugadores();
 
                 for (Jugador jugador : listaJugadores) {
-                    if (jugador.getIdSeleccion() == Integer.parseInt(idSeleccion)) {
+                    if (jugador.getSeleccion().getIdSeleccion()== Integer.parseInt(idSeleccion)) {
 
                     }
                 }
