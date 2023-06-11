@@ -10,10 +10,10 @@ public class Partido {
 
     private int numeroJornada;
 
+    private Seleccion seleccionTabla;
+    private Seleccion seleccionLocal;
 
-    private int seleccionLocal;
-
-    private int seleccionVisitante;
+    private Seleccion seleccionVisitante;
 
 
     private Arbitro arbitropartido;
@@ -42,19 +42,27 @@ public class Partido {
         this.numeroJornada = numeroJornada;
     }
 
-    public int getSeleccionLocal() {
+    public Seleccion getSeleccionTabla() {
+        return seleccionTabla;
+    }
+
+    public void setSeleccionTabla(Seleccion seleccionTabla) {
+        this.seleccionTabla = seleccionTabla;
+    }
+
+    public Seleccion getSeleccionLocal() {
         return seleccionLocal;
     }
 
-    public void setSeleccionLocal(int seleccionLocal) {
+    public void setSeleccionLocal(Seleccion seleccionLocal) {
         this.seleccionLocal = seleccionLocal;
     }
 
-    public int getSeleccionVisitante() {
+    public Seleccion getSeleccionVisitante() {
         return seleccionVisitante;
     }
 
-    public void setSeleccionVisitante(int seleccionVisitante) {
+    public void setSeleccionVisitante(Seleccion seleccionVisitante) {
         this.seleccionVisitante = seleccionVisitante;
     }
 
