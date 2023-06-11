@@ -8,10 +8,10 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item" >
-                <a class="nav-link" href="<%=request.getContextPath()%>/JugadorServlet">Jugadores</a>
+                <a class="nav-link" href="<%=request.getContextPath()%>/JugadoresServlet">Jugadores</a>
             </li>
             <li class="nav-item" >
-                <a class="nav-link" href="<%=request.getContextPath()%>/SeleccionServlet">Selecciones</a>
+                <a class="nav-link" href="<%=request.getContextPath()%>/SeleccionesServlet">Selecciones</a>
             </li>
         </ul>
     </div>
