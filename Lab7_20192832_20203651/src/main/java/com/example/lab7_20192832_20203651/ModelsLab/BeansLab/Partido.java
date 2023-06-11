@@ -4,18 +4,12 @@ import java.util.Date;
 
 public class Partido {
 
+
     private int idPartido;
-
     private Date fechapartido;
-
     private int numeroJornada;
-
-
-    private int seleccionLocal;
-
-    private int seleccionVisitante;
-
-
+    private Seleccion seleccionLocal;
+    private Seleccion seleccionVisitante;
     private Arbitro arbitropartido;
 
     public int getIdPartido() {
@@ -42,30 +36,30 @@ public class Partido {
         this.numeroJornada = numeroJornada;
     }
 
-    public int getSeleccionLocal() {
-        return seleccionLocal;
-    }
-
-    public void setSeleccionLocal(int seleccionLocal) {
-        this.seleccionLocal = seleccionLocal;
-    }
-
-    public int getSeleccionVisitante() {
-        return seleccionVisitante;
-    }
-
-    public void setSeleccionVisitante(int seleccionVisitante) {
-        this.seleccionVisitante = seleccionVisitante;
-    }
-
     public Arbitro getArbitropartido() {
         return arbitropartido;
     }
-
     public void setArbitropartido(Arbitro arbitropartido) {
         this.arbitropartido = arbitropartido;
     }
+
+    public Seleccion getSeleccionLocal() {
+        return seleccionLocal;
+    }
+
+    public void setSeleccionLocal(Seleccion seleccionLocal) {
+        this.seleccionLocal = seleccionLocal;
+    }
+
+    public Seleccion getSeleccionVisitante() {
+        return seleccionVisitante;
+    }
+
+    public void setSeleccionVisitante(Seleccion seleccionVisitante) {
+        this.seleccionVisitante = seleccionVisitante;
+    }
 }
+
 
 
 
