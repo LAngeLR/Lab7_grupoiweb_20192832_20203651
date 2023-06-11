@@ -2,7 +2,7 @@ package com.example.lab7_20192832_20203651.ModelsLab.Daos.Lab;
 
 import com.example.lab7_20192832_20203651.ModelsLab.BeansLab.Estadio;
 import com.example.lab7_20192832_20203651.ModelsLab.BeansLab.Seleccion;
-import com.example.lab7_20192832_20203651.ModelsLab.BeansLab.Partido;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
