@@ -86,8 +86,8 @@ public class SeleccionDao extends BaseDao {
 
     public void crearPartido(Partido partido) {
 
-        String sql1 = "INSERT INTO seleccion(idSeleccion,nombre, tecnico,estadio_idEstadio) VALUES (?, ?, ?);";
-        String sql2 = "INSERT INTO estadio(idEstadio,nombre,provincia,club) VALUES (?,?,?)";
+        String sql1 = "INSERT INTO seleccion(idSeleccion,nombre, tecnico,estadio_idEstadio) VALUES (?, ?, ?,?);";
+        String sql2 = "INSERT INTO estadio(idEstadio,nombre,provincia,club) VALUES (?,?,?,?)";
 
         try (Connection conn = getConnection();
              PreparedStatement pstmtPartido = conn.prepareStatement(sql1);
